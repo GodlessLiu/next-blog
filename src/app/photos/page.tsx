@@ -1,6 +1,6 @@
-import Image from 'next/legacy/image';
 import Link from 'next/link';
 import { listPhotos } from './utils';
+import { BaseImage } from '@/components/BaseImage';
 
 export default function Page() {
   const photos = listPhotos();
@@ -9,11 +9,11 @@ export default function Page() {
       {photos.map((name) => {
         return (
           <div key={name} className="aspect-square relative rounded-xl overflow-hidden">
-            <Link href={`/photos/${name}`}>
-              <Image
+            <Link href={`/photos/${name}`} className="w-full h-full inline-block relative" scroll={false}>
+              <BaseImage
                 src={`/resources/photos/${name}`}
-                alt="photo"
-                className="cursor-pointer"
+                alt={name}
+                className="cursor-pointer w-full h-auto"
                 objectFit="cover"
                 layout="fill"
               />

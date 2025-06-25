@@ -1,4 +1,4 @@
-import Image from 'next/legacy/image';
+import { BaseImage } from '@/components/BaseImage';
 
 export interface PhotosProps {
   params: Promise<{ name: string }>;
@@ -9,9 +9,9 @@ export default async function Page({ params }: PhotosProps) {
 
   return (
     <div className="flex justify-center relative">
-      <Image
+      <BaseImage
         src={`/resources/photos/${name}`}
-        alt="photo"
+        alt={name}
         objectFit="contain"
         width={666}
         height={666}
