@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { Runcat } from './Runcat';
 import ThemeToggle from './ThemeToggle';
-import Image from "next/legacy/image";
+import Image from 'next/legacy/image';
 
 export function Header() {
   return (
