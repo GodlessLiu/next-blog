@@ -1,0 +1,33 @@
+.running-cat {
+    width: 32px;
+    height: 32px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: run steps(5) infinite;
+}
+
+@keyframes run {
+    0% {
+        background-image: var(--cat-url0);
+    }
+
+    20% {
+        background-image: var(--cat-url1);
+    }
+
+    40% {
+        background-image: var(--cat-url2);
+    }
+
+    60% {
+        background-image: var(--cat-url3);
+    }
+
+    80% {
+        background-image: var(--cat-url4);
+    }
+
+    100% {
+        background-image: var(--cat-url0);
+    }
+}

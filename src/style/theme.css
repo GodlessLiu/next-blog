@@ -1,0 +1,49 @@
+:root {
+    --background: #ffffff;
+    --foreground: #171717;
+    --scrollbar: #eee;
+    --scrollbar-hover: #bbb;
+    --cat-url0: url('/cat/light_cat_0.ico');
+    --cat-url1: url('/cat/light_cat_1.ico');
+    --cat-url2: url('/cat/light_cat_2.ico');
+    --cat-url3: url('/cat/light_cat_3.ico');
+    --cat-url4: url('/cat/light_cat_4.ico');
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+.dark {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+    --scrollbar: #111;
+    --scrollbar-hover: #222;
+    --cat-url0: url('/cat/dark_cat_0.ico');
+    --cat-url1: url('/cat/dark_cat_1.ico');
+    --cat-url2: url('/cat/dark_cat_2.ico');
+    --cat-url3: url('/cat/dark_cat_3.ico');
+    --cat-url4: url('/cat/dark_cat_4.ico');
+}
+
+
+
+::view-transition-old(root),
+::view-transition-new(root) {
+    animation: none;
+    mix-blend-mode: normal;
+}
+
+::view-transition-old(root) {
+    z-index: 1;
+}
+
+::view-transition-new(root) {
+    z-index: 9999;
+}
+
+.dark::view-transition-old(root) {
+    z-index: 9999;
+}
+
+.dark::view-transition-new(root) {
+    z-index: 1;
+}
