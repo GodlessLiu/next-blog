@@ -1,4 +1,4 @@
-:root {
+.light:root {
     --background: #ffffff;
     --foreground: #171717;
     --scrollbar: #eee;
@@ -10,9 +10,10 @@
     --cat-url4: url('/cat/light_cat_4.ico');
 }
 
+
 @custom-variant dark (&:where(.dark, .dark *));
 
-.dark {
+.dark:root {
     --background: #0a0a0a;
     --foreground: #ededed;
     --scrollbar: #111;
@@ -23,8 +24,6 @@
     --cat-url3: url('/cat/dark_cat_3.ico');
     --cat-url4: url('/cat/dark_cat_4.ico');
 }
-
-
 
 ::view-transition-old(root),
 ::view-transition-new(root) {

@@ -2,7 +2,8 @@
 @import "../style/theme.css";
 @import "../style/run-cat.css";
 @import "../style/scrollbar.css";
-
+/* markdown css style */
+@import "../style//markdown.css";
 
 @plugin "@iconify/tailwind4" {
   scale: 2;
