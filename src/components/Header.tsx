@@ -12,7 +12,9 @@ export function Header() {
         </Link>
       </span>
       <div className="flex gap-2">
-        <Runcat />
+        <Link href="/about" title="about">
+          <span className="icon-[prime--id-card]"></span>
+        </Link>
         <Link href="/photos" title="photos">
           <span className="icon-[prime--camera]"></span>
         </Link>
@@ -20,6 +22,7 @@ export function Header() {
           <span className="icon-[prime--github]"></span>
         </Link>
         <ThemeToggle />
+        <Runcat />
       </div>
     </header>
   );
