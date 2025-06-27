@@ -2,10 +2,10 @@ import type { NextConfig } from 'next';
 import createMDX from '@next/mdx';
 
 const nextConfig: NextConfig = {
-  images: {
-    qualities: [100, 75, 50],
-  },
   pageExtensions: ['tsx', 'ts', 'mdx', 'md'],
+  experimental: {
+    viewTransition: true,
+  },
 };
 
 const withMdx = createMDX({

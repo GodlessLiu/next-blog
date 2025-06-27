@@ -5,6 +5,7 @@ import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { ThemeProvider } from 'next-themes';
 import { ProgressBarProvider } from '@/components/ProgressBarProvider';
+import { ViewTransiationProvider } from '@/components/TransiationProvider';
 
 export const metadata: Metadata = {
   title: `Hilary Liu's blog`,
@@ -29,10 +30,12 @@ export default function RootLayout({
           <ProgressBarProvider>
             <div className="h-screen overflow-auto flex flex-col py-4">
               <Header />
-              <main className="py-10">
-                {children}
-                {modal}
-              </main>
+              <ViewTransiationProvider>
+                <main className="py-10">
+                  {children}
+                  {modal}
+                </main>
+              </ViewTransiationProvider>
               <Footer />
             </div>
           </ProgressBarProvider>
