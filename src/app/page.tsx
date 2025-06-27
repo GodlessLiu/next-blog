@@ -1,3 +1,3 @@
 export default function Page() {
-  return <div className="flex justify-center">This is home page!!</div>;
+  return <div className="flex justify-center">首页</div>;
 }
